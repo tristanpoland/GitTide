@@ -52,6 +52,25 @@
           }
         ],
         "sidecar": true
+      },
+      "dialog": {
+        "all": true,
+        "ask": true,
+        "confirm": true,
+        "message": true,
+        "open": true,
+        "save": true
+      },
+      "fs": {
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "exists": true,
+        "scope": ["**"]
+      },
+      "path": {
+        "all": true
       }
     },
     "bundle": {
@@ -88,7 +107,7 @@
       }
     },
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' ipc: http://localhost:*"
     },
     "updater": {
       "active": false
@@ -101,7 +120,9 @@
         "transparent": true,
         "title": "Nebula",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "minWidth": 600,
+        "minHeight": 400
       }
     ]
   }
